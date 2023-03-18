@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Dish.cs" />
+    <Compile Include="Models\LoginInfo.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="OrderContext.cs" />
     <Compile Include="RestaurantContext.cs" />
