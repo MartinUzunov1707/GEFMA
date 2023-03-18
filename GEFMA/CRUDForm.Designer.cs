@@ -52,6 +52,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.lblETA = new System.Windows.Forms.Label();
             this.txtETA = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
@@ -303,11 +304,23 @@
             this.txtETA.Size = new System.Drawing.Size(857, 62);
             this.txtETA.TabIndex = 23;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(17, 718);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(259, 85);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Back to dishes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtETA);
             this.Controls.Add(this.lblETA);
             this.Controls.Add(this.btnSave);
@@ -368,5 +381,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblETA;
         private System.Windows.Forms.TextBox txtETA;
+        private System.Windows.Forms.Button button1;
     }
 }
