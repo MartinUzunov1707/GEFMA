@@ -64,7 +64,10 @@ namespace GEFMA
                 if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
                 {
                     MessageBox.Show("Login successful!");
-                   // implement edit page
+                    // implement edit page
+                    OrderForm orderForm = new OrderForm(null);
+                    orderForm.Show();
+                    Hide();
                 }
                 else
                 {

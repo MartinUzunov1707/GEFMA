@@ -49,7 +49,7 @@
             // 
             this.lblInstruction.AutoSize = true;
             this.lblInstruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblInstruction.Location = new System.Drawing.Point(722, 494);
+            this.lblInstruction.Location = new System.Drawing.Point(723, 608);
             this.lblInstruction.Name = "lblInstruction";
             this.lblInstruction.Size = new System.Drawing.Size(447, 42);
             this.lblInstruction.TabIndex = 1;
