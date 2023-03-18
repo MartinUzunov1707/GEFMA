@@ -26,8 +26,6 @@ namespace GEFMA
             WindowState = FormWindowState.Maximized;
             if (File.Exists("loginInfo.bin"))
             {
-
-           
                 StreamReader sr = new StreamReader("loginInfo.bin");
                 if (sr.ReadLine() == null)
                 {
@@ -38,7 +36,6 @@ namespace GEFMA
             }
             else
             {
-                //File.Create("loginInfo.bin");
                 StreamWriter w = new StreamWriter("loginInfo.bin");
                 w.Close();
                 lblTitle.Text = "Register as an admin";
