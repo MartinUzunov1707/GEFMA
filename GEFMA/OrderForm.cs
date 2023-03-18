@@ -49,7 +49,6 @@ namespace GEFMA
                 chkIsVegetarian.Checked = currentDish.IsVegetarian;
                 chkIsGlutenFree.Checked = currentDish.IsGlutenFree;
                 chkIsHalal.Checked = currentDish.IsHalal;
-            }
         }   
     }
 }
