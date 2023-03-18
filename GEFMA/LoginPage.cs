@@ -27,20 +27,31 @@ namespace GEFMA
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            StreamReader sr = new StreamReader("loginInfo.txt");
-            if (sr.ReadLine() == null)
+            try
             {
+                StreamReader sr = new StreamReader("loginInfo.txt");
+                if (sr.ReadLine() == null)
+                {
+                    lblTitle.Text = "Register as an admin";
+                    btnLogin.Text = "Register";
+                }
+                sr.Close();
+            }
+            catch
+            {
+                StreamWriter r = new StreamWriter("loginInfo.txt");
+                r.Close();
                 lblTitle.Text = "Register as an admin";
                 btnLogin.Text = "Register";
             }
-            sr.Close();
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if(btnLogin.Text == "Register")
             {
-                LoginInfo loginInfo = new LoginInfo(txtUsername.Text, txtPassword.Text);
+                LoginInfo loginInfo = new LoginInfo(txtUsername.Text, txtPassword.Text, false);
                 StreamWriter writer = new StreamWriter("loginInfo.txt");
                 writer.WriteLine(loginInfo.Username);
                 writer.WriteLine(loginInfo.Password);
@@ -51,10 +62,10 @@ namespace GEFMA
                 StreamReader sr = new StreamReader("loginInfo.txt");
                 string Username = sr.ReadLine();
                 string Password = sr.ReadLine();
-                LoginInfo login = new LoginInfo(Username, Password);
+                LoginInfo login = new LoginInfo(Username, Password, true);
                 if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
                 {
-                    //go to edit page
+                   // implement edit page
                 }
             }
 
