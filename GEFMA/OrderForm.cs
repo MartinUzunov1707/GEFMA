@@ -20,6 +20,21 @@ namespace GEFMA
             InitializeComponent();
             currentDish = dish;
         }
+        public byte[] ConvertImageToByte(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
         private void OrderForm_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
