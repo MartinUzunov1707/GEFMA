@@ -16,5 +16,11 @@ namespace GEFMA
         {
             InitializeComponent();
         }
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+        }
     }
 }

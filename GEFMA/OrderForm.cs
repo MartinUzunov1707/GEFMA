@@ -22,8 +22,14 @@ namespace GEFMA
         }
         private void OrderForm_Load(object sender, EventArgs e)
         {
-            if(currentDish == null)
+            WindowState = FormWindowState.Normal;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            if (currentDish == null)
             {
+                LoginPage Login = new LoginPage();
+                Login.Show();
+                Hide();
                 //implement Login as Admin feature.
             }
         }
