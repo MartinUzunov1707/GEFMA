@@ -15,7 +15,7 @@ namespace Data.Models
             this.ETA= OrderETA;
         }
         public List<Dish> OrderedDishes { get; set; }
-        public  { get; set; }
+        public float Price{ get; set; }
         public float ETA { get; set; }
     }
   
