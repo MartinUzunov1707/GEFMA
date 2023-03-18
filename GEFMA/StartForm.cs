@@ -12,25 +12,23 @@ namespace GEFMA
 {
     public partial class StartForm : Form
     {
-       
         public StartForm()
         {
             InitializeComponent();
         }
-
         private void StartForm_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Normal;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
             TextBox tb = new TextBox();
-            this.Controls.Add(tb);
+            Controls.Add(tb);
             tb.KeyPress += new KeyPressEventHandler(KeyPressed);
         }
         private void KeyPressed(object sender, KeyPressEventArgs e)
         {         
             OrderForm orderForm = new OrderForm();
-            this.Hide();
+            Hide();
             orderForm.Show();                    
         }      
     }
