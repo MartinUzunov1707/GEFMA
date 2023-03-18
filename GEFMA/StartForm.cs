@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Data;
 using System.Windows.Forms;
 
 namespace GEFMA
@@ -26,9 +27,20 @@ namespace GEFMA
         }
         private void StartForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            OrderForm orderForm = new OrderForm(restaurantBusiness.Get(0));
-            orderForm.Show();
-            Hide();
+            Dish firstDish = restaurantBusiness.Get(0);
+            if(firstDish != null)
+            {
+                OrderForm orderForm = new OrderForm(firstDish);
+                orderForm.Show();
+                Hide();
+            }
+            else
+            {
+                LoginPage Login = new LoginPage();
+                Login.Show();
+                Hide();
+            }
+            
         }
 
     }
