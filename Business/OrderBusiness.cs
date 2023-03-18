@@ -44,4 +44,16 @@ public class OrderBusiness
             }
         }
     }
+    public void Delete(int id)
+    {
+        using (OrderContext = new OrderContext())
+        {
+            Order item = OrderContext.Orders.Find(id);
+            if (item != null)
+            {
+                OrderContext.Orders.Remove(item);
+                OrderContext.SaveChanges();
+            }
+        }
+    }
 }
