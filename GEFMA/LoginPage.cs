@@ -26,8 +26,6 @@ namespace GEFMA
             WindowState = FormWindowState.Maximized;
             if (File.Exists("loginInfo.bin"))
             {
-
-           
                 StreamReader sr = new StreamReader("loginInfo.bin");
                 if (sr.ReadLine() == null)
                 {
