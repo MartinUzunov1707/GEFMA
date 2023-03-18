@@ -51,6 +51,10 @@ namespace GEFMA
                 writer.WriteLine(string.Join("", loginInfo.Username));
                 writer.WriteLine(string.Join("", loginInfo.Password));
                 writer.Close();
+                MessageBox.Show("Register successful!");
+                CRUDForm AdminForm = new CRUDForm();
+                AdminForm.Show();
+                Hide();
             }
             else
             {
@@ -61,7 +65,9 @@ namespace GEFMA
                 if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
                 {
                     MessageBox.Show("Login successful!");
-                   // implement edit page
+                    CRUDForm AdminForm = new CRUDForm();
+                    AdminForm.Show();
+                    Hide();
                 }
                 else
                 {
