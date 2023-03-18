@@ -24,4 +24,12 @@ public class OrderBusiness
             return OrderContext.Orders.Find(id);
         }
     }
+    public void Add(Order dish)
+    {
+        using (OrderContext = new OrderContext())
+        {
+            OrderContext.Orders.Add(dish);
+            OrderContext.SaveChanges();
+        }
+    }
 }
