@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,7 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using System.Data.Entity.Infrastructure;
 
 namespace GEFMA
 {
@@ -24,11 +27,38 @@ namespace GEFMA
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
+            StreamReader sr = new StreamReader("loginInfo.txt");
+            if (sr.ReadLine() == null)
+            {
+                lblTitle.Text = "Register as an admin";
+                btnLogin.Text = "Register";
+            }
+            sr.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            if(btnLogin.Text == "Register")
+            {
+                LoginInfo loginInfo = new LoginInfo(txtUsername.Text, txtPassword.Text);
+                StreamWriter writer = new StreamWriter("loginInfo.txt");
+                writer.WriteLine(loginInfo.Username);
+                writer.WriteLine(loginInfo.Password);
+                writer.Close();
+            }
+            else
+            {
+                StreamReader sr = new StreamReader("loginInfo.txt");
+                string Username = sr.ReadLine();
+                string Password = sr.ReadLine();
+                LoginInfo login = new LoginInfo(Username, Password);
+                if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
+                {
+                    //go to edit page
+                }
+            }
+
+
         }
     }
 }
