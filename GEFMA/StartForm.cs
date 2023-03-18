@@ -36,7 +36,7 @@ namespace GEFMA
             }
             else
             {
-                LoginPage Login = new LoginPage();
+                LoginForm Login = new LoginForm();
                 Login.Show();
                 Hide();
             }

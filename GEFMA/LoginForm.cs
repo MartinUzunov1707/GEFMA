@@ -13,9 +13,9 @@ using System.Data.Entity.Infrastructure;
 
 namespace GEFMA
 {
-    public partial class LoginPage : Form
+    public partial class LoginForm : Form
     {
-        public LoginPage()
+        public LoginForm()
         {
             InitializeComponent();
         }
