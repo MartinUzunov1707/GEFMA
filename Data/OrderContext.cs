@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Data.Models;
 
-public class Class1
+public class OrderContext : DbContext
 {
-	public Class1()
-	{
-	}
+    public OrderContext() : base("name=OrderContext") { }
+    public DbSet<Order> Orders { get; set; }
 }
