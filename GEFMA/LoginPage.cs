@@ -57,16 +57,14 @@ namespace GEFMA
             else
             {
                 StreamReader sr = new StreamReader("loginInfo.txt");
-                string Username = sr.ReadLine();
-                string Password = sr.ReadLine();
+                string Username = sr.ReadLine().ToCharArray().Where(x=>x!='\n').ToString();
+                string Password = sr.ReadLine().ToCharArray().Where(x => x != '\n').ToString();
                 LoginInfo login = new LoginInfo(Username, Password, true);
                 if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
                 {
                    // implement edit page
                 }
             }
-
-
         }
     }
 }
