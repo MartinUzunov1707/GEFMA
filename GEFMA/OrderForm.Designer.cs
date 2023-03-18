@@ -28,23 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblIsVegan = new System.Windows.Forms.Label();
+            this.lblIsVegetarian = new System.Windows.Forms.Label();
+            this.lblIsGlutenFree = new System.Windows.Forms.Label();
+            this.lblIsHalal = new System.Windows.Forms.Label();
+            this.chkIsVegan = new System.Windows.Forms.CheckBox();
+            this.chkIsVegetarian = new System.Windows.Forms.CheckBox();
+            this.chkIsGlutenFree = new System.Windows.Forms.CheckBox();
+            this.chkIsHalal = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 450);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(800, 450);
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
             // button1
             // 
@@ -85,10 +94,10 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblName.Location = new System.Drawing.Point(908, 44);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(61, 24);
+            this.lblName.Size = new System.Drawing.Size(78, 29);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Name";
             // 
@@ -102,22 +111,121 @@
             this.lblPrice.TabIndex = 6;
             this.lblPrice.Text = "Price";
             // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDescription.Location = new System.Drawing.Point(909, 141);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(104, 24);
+            this.lblDescription.TabIndex = 7;
+            this.lblDescription.Text = "Description";
+            // 
+            // lblIsVegan
+            // 
+            this.lblIsVegan.AutoSize = true;
+            this.lblIsVegan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblIsVegan.Location = new System.Drawing.Point(916, 237);
+            this.lblIsVegan.Name = "lblIsVegan";
+            this.lblIsVegan.Size = new System.Drawing.Size(66, 24);
+            this.lblIsVegan.TabIndex = 8;
+            this.lblIsVegan.Text = "Vegan";
+            // 
+            // lblIsVegetarian
+            // 
+            this.lblIsVegetarian.AutoSize = true;
+            this.lblIsVegetarian.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblIsVegetarian.Location = new System.Drawing.Point(916, 302);
+            this.lblIsVegetarian.Name = "lblIsVegetarian";
+            this.lblIsVegetarian.Size = new System.Drawing.Size(101, 24);
+            this.lblIsVegetarian.TabIndex = 9;
+            this.lblIsVegetarian.Text = "Vegetarian";
+            // 
+            // lblIsGlutenFree
+            // 
+            this.lblIsGlutenFree.AutoSize = true;
+            this.lblIsGlutenFree.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblIsGlutenFree.Location = new System.Drawing.Point(916, 363);
+            this.lblIsGlutenFree.Name = "lblIsGlutenFree";
+            this.lblIsGlutenFree.Size = new System.Drawing.Size(110, 24);
+            this.lblIsGlutenFree.TabIndex = 10;
+            this.lblIsGlutenFree.Text = "Gluten Free";
+            // 
+            // lblIsHalal
+            // 
+            this.lblIsHalal.AutoSize = true;
+            this.lblIsHalal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblIsHalal.Location = new System.Drawing.Point(916, 424);
+            this.lblIsHalal.Name = "lblIsHalal";
+            this.lblIsHalal.Size = new System.Drawing.Size(52, 24);
+            this.lblIsHalal.TabIndex = 11;
+            this.lblIsHalal.Text = "Halal";
+            // 
+            // chkIsVegan
+            // 
+            this.chkIsVegan.AutoSize = true;
+            this.chkIsVegan.Enabled = false;
+            this.chkIsVegan.Location = new System.Drawing.Point(1017, 244);
+            this.chkIsVegan.Name = "chkIsVegan";
+            this.chkIsVegan.Size = new System.Drawing.Size(15, 14);
+            this.chkIsVegan.TabIndex = 12;
+            this.chkIsVegan.UseVisualStyleBackColor = true;
+            // 
+            // chkIsVegetarian
+            // 
+            this.chkIsVegetarian.AutoSize = true;
+            this.chkIsVegetarian.Enabled = false;
+            this.chkIsVegetarian.Location = new System.Drawing.Point(1035, 310);
+            this.chkIsVegetarian.Name = "chkIsVegetarian";
+            this.chkIsVegetarian.Size = new System.Drawing.Size(15, 14);
+            this.chkIsVegetarian.TabIndex = 13;
+            this.chkIsVegetarian.UseVisualStyleBackColor = true;
+            // 
+            // chkIsGlutenFree
+            // 
+            this.chkIsGlutenFree.AutoSize = true;
+            this.chkIsGlutenFree.Enabled = false;
+            this.chkIsGlutenFree.Location = new System.Drawing.Point(1044, 371);
+            this.chkIsGlutenFree.Name = "chkIsGlutenFree";
+            this.chkIsGlutenFree.Size = new System.Drawing.Size(15, 14);
+            this.chkIsGlutenFree.TabIndex = 14;
+            this.chkIsGlutenFree.UseVisualStyleBackColor = true;
+            // 
+            // chkIsHalal
+            // 
+            this.chkIsHalal.AutoSize = true;
+            this.chkIsHalal.Enabled = false;
+            this.chkIsHalal.Location = new System.Drawing.Point(1017, 432);
+            this.chkIsHalal.Name = "chkIsHalal";
+            this.chkIsHalal.Size = new System.Drawing.Size(15, 14);
+            this.chkIsHalal.TabIndex = 15;
+            this.chkIsHalal.UseVisualStyleBackColor = true;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1305, 683);
+            this.Controls.Add(this.chkIsHalal);
+            this.Controls.Add(this.chkIsGlutenFree);
+            this.Controls.Add(this.chkIsVegetarian);
+            this.Controls.Add(this.chkIsVegan);
+            this.Controls.Add(this.lblIsHalal);
+            this.Controls.Add(this.lblIsGlutenFree);
+            this.Controls.Add(this.lblIsVegetarian);
+            this.Controls.Add(this.lblIsVegan);
+            this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox);
             this.Name = "OrderForm";
             this.Text = "OrderForm";
             this.Load += new System.EventHandler(this.OrderForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,12 +233,21 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label lblIsVegan;
+        private System.Windows.Forms.Label lblIsVegetarian;
+        private System.Windows.Forms.Label lblIsGlutenFree;
+        private System.Windows.Forms.Label lblIsHalal;
+        private System.Windows.Forms.CheckBox chkIsVegan;
+        private System.Windows.Forms.CheckBox chkIsVegetarian;
+        private System.Windows.Forms.CheckBox chkIsGlutenFree;
+        private System.Windows.Forms.CheckBox chkIsHalal;
     }
 }
