@@ -30,6 +30,5 @@ namespace GEFMA
             orderForm.Show();
             Hide();
         }
-
     }
 }

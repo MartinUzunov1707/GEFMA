@@ -40,6 +40,9 @@ namespace GEFMA
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
+        }
+        private void OrderForm_Shown(object sender, EventArgs e)
+        {
             if (currentDish == null)
             {
                 LoginPage Login = new LoginPage();
@@ -58,6 +61,6 @@ namespace GEFMA
                 chkIsGlutenFree.Checked = currentDish.IsGlutenFree;
                 chkIsHalal.Checked = currentDish.IsHalal;
             }
-        }   
+        }
     }
 }
