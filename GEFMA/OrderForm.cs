@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GEFMA
 {
-    public partial class Form2 : Form
+    public partial class OrderForm : Form
     {
-        public Form2()
+        public OrderForm()
         {
             InitializeComponent();
         }
