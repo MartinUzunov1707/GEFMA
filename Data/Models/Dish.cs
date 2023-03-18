@@ -8,7 +8,7 @@ namespace Data
 {
     public class Dish
     {
-        public Dish(string DishName, decimal DishPrice, string DishDesc, byte[] DishImage, bool DishIsVegetarian, bool DishIsVegan, bool DishIsGlutenFree, bool DishIsKosher)
+        public Dish(string DishName, decimal DishPrice, string DishDesc, byte[] DishImage, bool DishIsVegetarian, bool DishIsVegan, bool DishIsGlutenFree, bool DishIsKosher, float DishEstimatedTimeToComplete)
         {
             Name = DishName;
             Price = DishPrice;
@@ -18,6 +18,7 @@ namespace Data
             IsVegan = DishIsVegan;
             IsGlutenFree = DishIsGlutenFree;
             IsKosher = DishIsKosher;
+            EstimatedTimeToComplete = DishEstimatedTimeToComplete;
         }
         public Dish()
         { }
@@ -30,5 +31,6 @@ namespace Data
         public bool IsVegan { get; set; }
         public bool IsGlutenFree { get; set; }
         public bool IsKosher { get; set; }
+        public float EstimatedTimeToComplete { get; set; }
     }
 }
