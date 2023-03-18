@@ -26,7 +26,7 @@ namespace GEFMA
             WindowState = FormWindowState.Maximized;
             try
             {
-                StreamReader sr = new StreamReader("loginInfo.txt");
+                StreamReader sr = new StreamReader("loginInfo.bin");
                 if (sr.ReadLine() == null)
                 {
                     lblTitle.Text = "Register as an admin";
@@ -36,7 +36,7 @@ namespace GEFMA
             }
             catch
             {
-                StreamWriter r = new StreamWriter("loginInfo.txt");
+                StreamWriter r = new StreamWriter("loginInfo.bin");
                 r.Close();
                 lblTitle.Text = "Register as an admin";
                 btnLogin.Text = "Register";
@@ -48,16 +48,16 @@ namespace GEFMA
             if(btnLogin.Text == "Register")
             {
                 LoginInfo loginInfo = new LoginInfo(txtUsername.Text, txtPassword.Text, false);
-                StreamWriter writer = new StreamWriter("loginInfo.txt");
-                writer.WriteLine(loginInfo.Username);
-                writer.WriteLine(loginInfo.Password);
+                StreamWriter writer = new StreamWriter("loginInfo.bin");
+                writer.WriteLine(string.Join("", loginInfo.Username));
+                writer.WriteLine(string.Join("", loginInfo.Password));
                 writer.Close();
             }
             else
             {
-                StreamReader sr = new StreamReader("loginInfo.txt");
-                string Username = sr.ReadLine().ToCharArray().Where(x=>x!='\n').ToString();
-                string Password = sr.ReadLine().ToCharArray().Where(x => x != '\n').ToString();
+                StreamReader sr = new StreamReader("loginInfo.bin");
+                string Username = sr.ReadLine();
+                string Password = sr.ReadLine();
                 LoginInfo login = new LoginInfo(Username, Password, true);
                 if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
                 {
