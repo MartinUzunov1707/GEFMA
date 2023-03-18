@@ -41,6 +41,17 @@ namespace GEFMA
             {
                 //implement Login as Admin feature.
             }
-        }
+            else
+            {
+                lblName.Text = currentDish.Name;
+                lblPrice.Text = $"{currentDish.Price:2f}";
+                lblDescription.Text = currentDish.Description;
+                pictureBox.Image = ConvertByteArrayToImage(currentDish.Image);
+                chkIsVegan.Checked = currentDish.IsVegan;
+                chkIsVegetarian.Checked = currentDish.IsVegetarian;
+                chkIsGlutenFree.Checked = currentDish.IsGlutenFree;
+                chkIsHalal.Checked = currentDish.IsHalal;
+            }
+        }   
     }
 }

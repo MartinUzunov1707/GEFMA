@@ -23,9 +23,9 @@ namespace GEFMA
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            TextBox tb = new TextBox();
+            TextBox tb = new TextBox();        
             Controls.Add(tb);
-            tb.KeyPress += new KeyPressEventHandler(KeyPressed);
+            tb.KeyPress += new KeyPressEventHandler(KeyPressed);          
         }
         private void KeyPressed(object sender, KeyPressEventArgs e)
         {         
