@@ -19,7 +19,6 @@ namespace GEFMA
             InitializeComponent();
             currentDish = dish;
         }
-
         private void OrderForm_Load(object sender, EventArgs e)
         {
 
