@@ -23,7 +23,7 @@ namespace Data.Models
                 Username = Encoding.UTF8.GetString(SaltedUsername);
                 Password = Encoding.UTF8.GetString(SaltedPassword);
             }
-        }      
+        }
         public string Username { get; set; }
         public string Password { get; set; }
         public bool CheckPasswordAndUsername(string EnteredPassword, string EnteredUsername)

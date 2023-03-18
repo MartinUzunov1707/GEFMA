@@ -41,7 +41,6 @@ namespace GEFMA
                 lblTitle.Text = "Register as an admin";
                 btnLogin.Text = "Register";
             }
-            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -62,6 +61,7 @@ namespace GEFMA
                 LoginInfo login = new LoginInfo(Username, Password, true);
                 if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
                 {
+                    txtUsername.Text = "OOODA";
                    // implement edit page
                 }
             }
