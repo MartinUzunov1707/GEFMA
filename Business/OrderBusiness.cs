@@ -32,4 +32,16 @@ public class OrderBusiness
             OrderContext.SaveChanges();
         }
     }
+    public void Update(Dish dish)
+    {
+        using (OrderContext = new OrderContext())
+        {
+            Order item = OrderContext.Orders.Find(dish.ID);
+            if (item != null)
+            {
+                OrderContext.Entry(item).CurrentValues.SetValues(dish);
+                OrderContext.SaveChanges();
+            }
+        }
+    }
 }
