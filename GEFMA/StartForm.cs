@@ -22,13 +22,10 @@ namespace GEFMA
         {
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
-            TextBox tb = new TextBox();        
-            Controls.Add(tb);
-            tb.KeyPress += new KeyPressEventHandler(KeyPressed);          
-        }
-        private void KeyPressed(object sender, KeyPressEventArgs e)
-        {         
+            WindowState = FormWindowState.Maximized;                   
+        }       
+        private void StartForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
             OrderForm orderForm = new OrderForm(restaurantBusiness.Get(0));
             orderForm.Show();
             Hide();

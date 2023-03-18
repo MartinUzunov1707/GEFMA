@@ -66,6 +66,7 @@
             this.Name = "StartForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.StartForm_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StartForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
