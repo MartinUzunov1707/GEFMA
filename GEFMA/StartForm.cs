@@ -27,7 +27,7 @@ namespace GEFMA
         }
         private void StartForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Dish firstDish = restaurantBusiness.Get(0);
+            Dish firstDish = restaurantBusiness.GetAll().First();
             if(firstDish != null)
             {
                 OrderForm orderForm = new OrderForm(firstDish);
