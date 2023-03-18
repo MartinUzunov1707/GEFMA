@@ -12,6 +12,7 @@ namespace GEFMA
 {
     public partial class StartForm : Form
     {
+       
         public StartForm()
         {
             InitializeComponent();
@@ -28,9 +29,9 @@ namespace GEFMA
         }
         private void KeyPressed(object sender, KeyPressEventArgs e)
         {         
-                OrderForm orderForm = new OrderForm();
-                orderForm.Show();
-                this.Hide();          
+            OrderForm orderForm = new OrderForm();
+            this.Hide();
+            orderForm.Show();                    
         }      
     }
 }
