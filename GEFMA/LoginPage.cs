@@ -24,8 +24,10 @@ namespace GEFMA
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            try
+            if (File.Exists("loginInfo.bin"))
             {
+
+           
                 StreamReader sr = new StreamReader("loginInfo.bin");
                 if (sr.ReadLine() == null)
                 {
@@ -34,15 +36,15 @@ namespace GEFMA
                 }
                 sr.Close();
             }
-            catch
+            else
             {
-                StreamWriter r = new StreamWriter("loginInfo.bin");
-                r.Close();
+                //File.Create("loginInfo.bin");
+                StreamWriter w = new StreamWriter("loginInfo.bin");
+                w.Close();
                 lblTitle.Text = "Register as an admin";
                 btnLogin.Text = "Register";
             }
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if(btnLogin.Text == "Register")
@@ -61,10 +63,18 @@ namespace GEFMA
                 LoginInfo login = new LoginInfo(Username, Password, true);
                 if (login.CheckPasswordAndUsername(txtPassword.Text,txtUsername.Text))
                 {
-                    txtUsername.Text = "OOODA";
+                    MessageBox.Show("Login successful!");
                    // implement edit page
                 }
+                else
+                {
+                    MessageBox.Show("Invalid username or password!");
+                }
             }
+        }   
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
