@@ -23,7 +23,7 @@ namespace GEFMA
         {
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;               
+            WindowState = FormWindowState.Maximized;      
         }
         private void StartForm_KeyPress(object sender, KeyPressEventArgs e)
         {
