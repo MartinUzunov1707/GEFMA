@@ -77,16 +77,24 @@ namespace GEFMA
             if (CurrentID - 1 >= 0)
             {
                 CurrentID--;
-                LoadDish(IDs[CurrentID]);
             }
+            else
+            {
+                CurrentID = IDs.Count - 1;
+            }
+            LoadDish(IDs[CurrentID]);
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (CurrentID + 1 <= IDs.Count - 1)
             {
                 CurrentID++;
-                LoadDish(IDs[CurrentID]);
             }
+            else
+            {
+                CurrentID = 0;
+            }
+            LoadDish(IDs[CurrentID]);
         }
     }
 }
