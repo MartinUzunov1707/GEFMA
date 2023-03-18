@@ -45,6 +45,7 @@
             this.chkIsGlutenFree = new System.Windows.Forms.CheckBox();
             this.chkIsHalal = new System.Windows.Forms.CheckBox();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,11 +213,22 @@
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(1797, 128);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(95, 56);
+            this.btnEdit.TabIndex = 17;
+            this.btnEdit.Text = "Edit Database";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.chkIsHalal);
             this.Controls.Add(this.chkIsGlutenFree);
@@ -262,5 +274,6 @@
         private System.Windows.Forms.CheckBox chkIsGlutenFree;
         private System.Windows.Forms.CheckBox chkIsHalal;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

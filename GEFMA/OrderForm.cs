@@ -41,7 +41,7 @@ namespace GEFMA
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             lblName.Text = currentDish.Name;
-            lblPrice.Text = $"{currentDish.Price:2f}";
+            lblPrice.Text = $"{currentDish.Price:f2}";
             lblDescription.Text = currentDish.Description;
             pictureBox.Image = ConvertByteArrayToImage(currentDish.Image);
             chkIsVegan.Checked = currentDish.IsVegan;
@@ -53,6 +53,11 @@ namespace GEFMA
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
