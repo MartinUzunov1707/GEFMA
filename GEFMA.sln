@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEFMA", "GEFMA\GEFMA.csproj", "{14386EC9-E842-498B-99F2-4B08127419F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{59492C53-7989-4B0A-B1C4-F0D0A27A279A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{F5FEB3EE-5DC9-4785-A20A-DA18744CB061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{14386EC9-E842-498B-99F2-4B08127419F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14386EC9-E842-498B-99F2-4B08127419F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14386EC9-E842-498B-99F2-4B08127419F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59492C53-7989-4B0A-B1C4-F0D0A27A279A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59492C53-7989-4B0A-B1C4-F0D0A27A279A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59492C53-7989-4B0A-B1C4-F0D0A27A279A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59492C53-7989-4B0A-B1C4-F0D0A27A279A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FEB3EE-5DC9-4785-A20A-DA18744CB061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FEB3EE-5DC9-4785-A20A-DA18744CB061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FEB3EE-5DC9-4785-A20A-DA18744CB061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FEB3EE-5DC9-4785-A20A-DA18744CB061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
