@@ -17,4 +17,11 @@ public class OrderBusiness
             return OrderContext.Orders.ToList();
         }
     }
+    public Order Get(int id)
+    {
+        using (OrderContext = new OrderContext())
+        {
+            return OrderContext.Orders.Find(id);
+        }
+    }
 }
