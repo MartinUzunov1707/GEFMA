@@ -10,14 +10,14 @@ namespace Data.Models
     {
         public Order(List<Dish> OrderDishes, float OrderPrice, float OrderETA)
         {
-            this.OrderedDishes = OrderDishes;
-            this.Price= OrderPrice;
-            this.ETA= OrderETA;
+            OrderedDishes = OrderDishes;
+            Price = OrderPrice;
+            ETA = OrderETA;
         }
+        public Order() 
+        { }
         public List<Dish> OrderedDishes { get; set; }
         public float Price{ get; set; }
         public float ETA { get; set; }
-    }
-  
-        
+    }  
 }
