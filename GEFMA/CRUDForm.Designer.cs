@@ -52,7 +52,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.lblETA = new System.Windows.Forms.Label();
             this.txtETA = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBackToDishes = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
@@ -304,23 +305,35 @@
             this.txtETA.Size = new System.Drawing.Size(857, 62);
             this.txtETA.TabIndex = 23;
             // 
-            // button1
+            // btnBackToDishes
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(17, 718);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 85);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Back to dishes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBackToDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBackToDishes.Location = new System.Drawing.Point(17, 878);
+            this.btnBackToDishes.Name = "btnBackToDishes";
+            this.btnBackToDishes.Size = new System.Drawing.Size(268, 118);
+            this.btnBackToDishes.TabIndex = 24;
+            this.btnBackToDishes.Text = "Back to dishes";
+            this.btnBackToDishes.UseVisualStyleBackColor = true;
+            this.btnBackToDishes.Click += new System.EventHandler(this.btnBackToDishes_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClose.Location = new System.Drawing.Point(17, 787);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(268, 85);
+            this.btnClose.TabIndex = 25;
+            this.btnClose.Text = "Quit";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // CRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnBackToDishes);
             this.Controls.Add(this.txtETA);
             this.Controls.Add(this.lblETA);
             this.Controls.Add(this.btnSave);
@@ -381,6 +394,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblETA;
         private System.Windows.Forms.TextBox txtETA;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBackToDishes;
+        private System.Windows.Forms.Button btnClose;
     }
 }

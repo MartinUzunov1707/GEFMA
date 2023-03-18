@@ -206,13 +206,12 @@ namespace GEFMA
                 ResetSelect();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBackToDishes_Click(object sender, EventArgs e)
         {
-            Dish firstDish = RestaurantBusiness.GetAll().FirstOrDefault();
-            if (firstDish != null)
+            Dish FirstDish = RestaurantBusiness.GetAll().FirstOrDefault();
+            if (FirstDish != null)
             {
-                OrderForm orderForm = new OrderForm(firstDish);
+                OrderForm orderForm = new OrderForm();
                 orderForm.Show();
                 Hide();
             }
@@ -222,6 +221,10 @@ namespace GEFMA
                 Login.Show();
                 Hide();
             }
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

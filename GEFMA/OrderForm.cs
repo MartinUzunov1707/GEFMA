@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using Business;
+using Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,12 @@ namespace GEFMA
 {
     public partial class OrderForm : Form
     {
-        public Dish currentDish;
-        public OrderForm(Dish dish)
+        RestaurantBusiness RestaurantBusiness = new RestaurantBusiness();
+        List<int> IDs = new List<int>();
+        int CurrentID = 0;
+        public OrderForm()
         {
             InitializeComponent();
-            currentDish = dish;
         }
         public byte[] ConvertImageToByte(Image img)
         {
@@ -35,32 +37,56 @@ namespace GEFMA
                 return Image.FromStream(ms);
             }
         }
+        private void LoadDish(int id)
+        {
+            Dish CurrentDish = RestaurantBusiness.Get(id);
+            lblName.Text = CurrentDish.Name;
+            lblPrice.Text = $"Price: {CurrentDish.Price:f2}";
+            lblDescription.Text = CurrentDish.Description;
+            lblETA.Text = $"Estimated time to make: {CurrentDish.EstimatedTimeToComplete:f2}";
+            picImage.Image = ConvertByteArrayToImage(CurrentDish.Image);
+            chkIsVegan.Checked = CurrentDish.IsVegan;
+            chkIsVegetarian.Checked = CurrentDish.IsVegetarian;
+            chkIsGlutenFree.Checked = CurrentDish.IsGlutenFree;
+            chkIsHalal.Checked = CurrentDish.IsHalal;
+        }
         private void OrderForm_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            lblName.Text = currentDish.Name;
-            lblPrice.Text = $"Price: {currentDish.Price:f2}";
-            lblDescription.Text = currentDish.Description;
-            lblETA.Text = $"Estimated time to make: {currentDish.EstimatedTimeToComplete:f2}";
-            pictureBox.Image = ConvertByteArrayToImage(currentDish.Image);
-            chkIsVegan.Checked = currentDish.IsVegan;
-            chkIsVegetarian.Checked = currentDish.IsVegetarian;
-            chkIsGlutenFree.Checked = currentDish.IsGlutenFree;
-            chkIsHalal.Checked = currentDish.IsHalal;
+            LoadDish(RestaurantBusiness.GetAll().FirstOrDefault().ID);
+            CurrentID = 0;
+            foreach (Dish item in RestaurantBusiness.GetAll())
+            {
+                IDs.Add(item.ID);
+            }
         }
-
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             Hide();
+        }
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (CurrentID - 1 >= 0)
+            {
+                CurrentID--;
+                LoadDish(IDs[CurrentID]);
+            }
+        }
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (CurrentID + 1 <= IDs.Count - 1)
+            {
+                CurrentID++;
+                LoadDish(IDs[CurrentID]);
+            }
         }
     }
 }

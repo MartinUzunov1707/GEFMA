@@ -14,7 +14,7 @@ namespace GEFMA
 {
     public partial class StartForm : Form
     {
-        RestaurantBusiness restaurantBusiness = new RestaurantBusiness(); 
+        RestaurantBusiness RestaurantBusiness = new RestaurantBusiness(); 
         public StartForm()
         {
             InitializeComponent();
@@ -27,10 +27,10 @@ namespace GEFMA
         }
         private void StartForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Dish firstDish = restaurantBusiness.GetAll().FirstOrDefault();
+            Dish firstDish = RestaurantBusiness.GetAll().FirstOrDefault();
             if(firstDish != null)
             {
-                OrderForm orderForm = new OrderForm(firstDish);
+                OrderForm orderForm = new OrderForm();
                 orderForm.Show();
                 Hide();
             }
