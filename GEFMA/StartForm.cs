@@ -30,8 +30,8 @@ namespace GEFMA
         private void KeyPressed(object sender, KeyPressEventArgs e)
         {         
             OrderForm orderForm = new OrderForm(restaurantBusiness.Get(0));
+            orderForm.Show();
             Hide();
-            orderForm.Show();                    
-        }      
+        }
     }
 }
