@@ -9,6 +9,7 @@ namespace Data.Models
 {
     public class LoginInfo
     {
+
         public LoginInfo(string LoginUsername, string LoginPassword, bool Salted)
         {
             if (Salted)

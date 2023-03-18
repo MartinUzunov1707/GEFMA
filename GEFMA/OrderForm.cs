@@ -41,8 +41,9 @@ namespace GEFMA
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             lblName.Text = currentDish.Name;
-            lblPrice.Text = $"{currentDish.Price:f2}";
+            lblPrice.Text = $"Price: {currentDish.Price:f2}";
             lblDescription.Text = currentDish.Description;
+            lblETA.Text = $"Estimated time to make: {currentDish.EstimatedTimeToComplete:f2}";
             pictureBox.Image = ConvertByteArrayToImage(currentDish.Image);
             chkIsVegan.Checked = currentDish.IsVegan;
             chkIsVegetarian.Checked = currentDish.IsVegetarian;
@@ -57,7 +58,9 @@ namespace GEFMA
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            Hide();
         }
     }
 }

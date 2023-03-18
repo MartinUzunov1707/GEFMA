@@ -222,9 +222,10 @@
             // 
             // picImage
             // 
-            this.picImage.Location = new System.Drawing.Point(300, 330);
+            this.picImage.Location = new System.Drawing.Point(296, 321);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(1200, 675);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 16;
             this.picImage.TabStop = false;
             // 
