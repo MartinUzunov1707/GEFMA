@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace GEFMA
 {
     public partial class StartForm : Form
     {
+        RestaurantBusiness restaurantBusiness = new RestaurantBusiness(); 
         public StartForm()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace GEFMA
         }
         private void KeyPressed(object sender, KeyPressEventArgs e)
         {         
-            OrderForm orderForm = new OrderForm();
+            OrderForm orderForm = new OrderForm(restaurantBusiness.Get(0));
             Hide();
             orderForm.Show();                    
         }      

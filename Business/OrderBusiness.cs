@@ -9,7 +9,7 @@ using Data;
 
 public class OrderBusiness
 {
-    private OrderContext orderContext;
+    private OrderContext OrderContext;
     public List<Order> GetAll()
     {
         using (OrderContext = new OrderContext())
