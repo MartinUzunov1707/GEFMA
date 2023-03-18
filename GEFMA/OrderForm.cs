@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace GEFMA
 {
     public partial class OrderForm : Form
     {
-        public OrderForm()
+        public Dish currentDish;
+        public OrderForm(Dish dish)
         {
             InitializeComponent();
+            currentDish = dish;
+        }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
