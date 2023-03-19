@@ -8,7 +8,7 @@ namespace Data.Models
 {
     public class Order
     {
-        public Order(List<Dish> OrderDishes, float OrderPrice, float OrderETA)
+        public Order(List<Dish> OrderDishes, decimal OrderPrice, float OrderETA)
         {
             OrderedDishes = OrderDishes;
             Price = OrderPrice;
@@ -16,8 +16,9 @@ namespace Data.Models
         }
         public Order() 
         { }
+        public int ID { get; set; }
         public List<Dish> OrderedDishes { get; set; }
-        public float Price{ get; set; }
+        public decimal Price{ get; set; }
         public float ETA { get; set; }
     }  
 }
