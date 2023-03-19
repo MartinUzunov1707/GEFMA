@@ -71,6 +71,18 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderedListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderedListForm.Designer.cs">
+      <DependentUpon>OrderedListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPlacedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderPlacedForm.Designer.cs">
+      <DependentUpon>OrderPlacedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,8 +103,14 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderedListForm.resx">
+      <DependentUpon>OrderedListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderPlacedForm.resx">
+      <DependentUpon>OrderPlacedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
