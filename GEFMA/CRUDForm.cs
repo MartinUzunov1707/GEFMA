@@ -167,15 +167,16 @@ namespace GEFMA
         }
         private void btnInsert_Click_1(object sender, EventArgs e)
         {
-            try
+            if(Image != null)
             {
                 RestaurantBusiness.Add(GetDish());
                 UpdateGrid();
                 ClearAllControls();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+            else 
+            { 
+            
+               MessageBox.Show("Invalid entry parameters!");
             }
         }
         private void btnSave_Click(object sender, EventArgs e)

@@ -104,9 +104,16 @@ namespace GEFMA
         }
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-            OrderedListForm OrderListForm = new OrderedListForm(Ordered);
-            OrderListForm.Show();
-            Hide();
+            if (Ordered.Count == 0)
+            {
+                MessageBox.Show("Add items to your order!");
+            }
+            else
+            {
+                OrderedListForm OrderListForm = new OrderedListForm(Ordered);
+                OrderListForm.Show();
+                Hide();
+            }
         }
     }
 }
