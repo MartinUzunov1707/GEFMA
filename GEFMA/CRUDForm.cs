@@ -134,11 +134,15 @@ namespace GEFMA
             {
                 btnUpdate.Visible = false;
                 btnSave.Visible = true;
+                btnInsert.Visible = false;
+                btnDelete.Visible = false;
             }
             else
             {
                 btnUpdate.Visible = true;
                 btnSave.Visible = false;
+                btnInsert.Visible = true;
+                btnDelete.Visible = true;
             }
         }
         private void DisableSelect()
@@ -203,16 +207,16 @@ namespace GEFMA
                 int id = int.Parse(item[0].Value.ToString());
                 RestaurantBusiness.Delete(id);
                 UpdateGrid();
+                ClearAllControls();
                 ResetSelect();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBackToDishes_Click(object sender, EventArgs e)
         {
-            Dish firstDish = RestaurantBusiness.GetAll().FirstOrDefault();
-            if (firstDish != null)
+            Dish FirstDish = RestaurantBusiness.GetAll().FirstOrDefault();
+            if (FirstDish != null)
             {
-                OrderForm orderForm = new OrderForm(firstDish);
+                OrderForm orderForm = new OrderForm();
                 orderForm.Show();
                 Hide();
             }
@@ -222,6 +226,10 @@ namespace GEFMA
                 Login.Show();
                 Hide();
             }
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
