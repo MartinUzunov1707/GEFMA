@@ -18,6 +18,7 @@ namespace GEFMA
         RestaurantBusiness RestaurantBusiness = new RestaurantBusiness();
         List<int> IDs = new List<int>();
         int CurrentID = 0;
+        List<Dish> Ordered = new List<Dish>();
         public OrderForm()
         {
             InitializeComponent();
@@ -95,6 +96,17 @@ namespace GEFMA
                 CurrentID = 0;
             }
             LoadDish(IDs[CurrentID]);
+        }
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            Ordered.Add(RestaurantBusiness.Get(IDs[CurrentID]));
+            MessageBox.Show("Added to order!");
+        }
+        private void btnViewOrder_Click(object sender, EventArgs e)
+        {
+            OrderedListForm OrderListForm = new OrderedListForm(Ordered);
+            OrderListForm.Show();
+            Hide();
         }
     }
 }

@@ -53,9 +53,9 @@
             // picImage
             // 
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(947, 80);
+            this.picImage.Location = new System.Drawing.Point(481, 110);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(751, 696);
+            this.picImage.Size = new System.Drawing.Size(1014, 530);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 0;
             this.picImage.TabStop = false;
@@ -63,9 +63,9 @@
             // btnPrevious
             // 
             this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPrevious.Location = new System.Drawing.Point(1489, 907);
+            this.btnPrevious.Location = new System.Drawing.Point(1310, 863);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(165, 95);
+            this.btnPrevious.Size = new System.Drawing.Size(185, 81);
             this.btnPrevious.TabIndex = 1;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnNext.Location = new System.Drawing.Point(1697, 907);
+            this.btnNext.Location = new System.Drawing.Point(1310, 950);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(165, 95);
+            this.btnNext.Size = new System.Drawing.Size(185, 79);
             this.btnNext.TabIndex = 2;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -85,28 +85,30 @@
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOrder.Location = new System.Drawing.Point(144, 907);
+            this.btnOrder.Location = new System.Drawing.Point(775, 863);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(174, 95);
+            this.btnOrder.Size = new System.Drawing.Size(529, 166);
             this.btnOrder.TabIndex = 3;
             this.btnOrder.Text = "Order Item";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnViewOrder
             // 
             this.btnViewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnViewOrder.Location = new System.Drawing.Point(433, 907);
+            this.btnViewOrder.Location = new System.Drawing.Point(481, 863);
             this.btnViewOrder.Name = "btnViewOrder";
-            this.btnViewOrder.Size = new System.Drawing.Size(163, 95);
+            this.btnViewOrder.Size = new System.Drawing.Size(288, 166);
             this.btnViewOrder.TabIndex = 4;
             this.btnViewOrder.Text = "View Order";
             this.btnViewOrder.UseVisualStyleBackColor = true;
+            this.btnViewOrder.Click += new System.EventHandler(this.btnViewOrder_Click);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 68.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblName.Location = new System.Drawing.Point(240, 68);
+            this.lblName.Location = new System.Drawing.Point(859, 5);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(287, 102);
             this.lblName.TabIndex = 5;
@@ -115,10 +117,10 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPrice.Location = new System.Drawing.Point(109, 825);
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPrice.Location = new System.Drawing.Point(471, 784);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(113, 42);
+            this.lblPrice.Size = new System.Drawing.Size(146, 55);
             this.lblPrice.TabIndex = 6;
             this.lblPrice.Text = "Price:";
             // 
@@ -126,7 +128,7 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDescription.Location = new System.Drawing.Point(86, 216);
+            this.lblDescription.Location = new System.Drawing.Point(474, 643);
             this.lblDescription.MaximumSize = new System.Drawing.Size(805, 281);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(205, 42);
@@ -137,7 +139,7 @@
             // 
             this.lblIsVegan.AutoSize = true;
             this.lblIsVegan.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblIsVegan.Location = new System.Drawing.Point(96, 468);
+            this.lblIsVegan.Location = new System.Drawing.Point(474, 697);
             this.lblIsVegan.Name = "lblIsVegan";
             this.lblIsVegan.Size = new System.Drawing.Size(116, 39);
             this.lblIsVegan.TabIndex = 8;
@@ -147,7 +149,7 @@
             // 
             this.lblIsVegetarian.AutoSize = true;
             this.lblIsVegetarian.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblIsVegetarian.Location = new System.Drawing.Point(96, 547);
+            this.lblIsVegetarian.Location = new System.Drawing.Point(1096, 701);
             this.lblIsVegetarian.Name = "lblIsVegetarian";
             this.lblIsVegetarian.Size = new System.Drawing.Size(184, 39);
             this.lblIsVegetarian.TabIndex = 9;
@@ -157,7 +159,7 @@
             // 
             this.lblIsGlutenFree.AutoSize = true;
             this.lblIsGlutenFree.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblIsGlutenFree.Location = new System.Drawing.Point(96, 625);
+            this.lblIsGlutenFree.Location = new System.Drawing.Point(712, 701);
             this.lblIsGlutenFree.Name = "lblIsGlutenFree";
             this.lblIsGlutenFree.Size = new System.Drawing.Size(199, 39);
             this.lblIsGlutenFree.TabIndex = 10;
@@ -167,7 +169,7 @@
             // 
             this.lblIsHalal.AutoSize = true;
             this.lblIsHalal.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblIsHalal.Location = new System.Drawing.Point(110, 701);
+            this.lblIsHalal.Location = new System.Drawing.Point(1399, 701);
             this.lblIsHalal.Name = "lblIsHalal";
             this.lblIsHalal.Size = new System.Drawing.Size(96, 39);
             this.lblIsHalal.TabIndex = 11;
@@ -177,7 +179,7 @@
             // 
             this.chkIsVegan.AutoSize = true;
             this.chkIsVegan.Enabled = false;
-            this.chkIsVegan.Location = new System.Drawing.Point(265, 479);
+            this.chkIsVegan.Location = new System.Drawing.Point(520, 739);
             this.chkIsVegan.Name = "chkIsVegan";
             this.chkIsVegan.Size = new System.Drawing.Size(15, 14);
             this.chkIsVegan.TabIndex = 12;
@@ -187,7 +189,7 @@
             // 
             this.chkIsVegetarian.AutoSize = true;
             this.chkIsVegetarian.Enabled = false;
-            this.chkIsVegetarian.Location = new System.Drawing.Point(303, 568);
+            this.chkIsVegetarian.Location = new System.Drawing.Point(1185, 739);
             this.chkIsVegetarian.Name = "chkIsVegetarian";
             this.chkIsVegetarian.Size = new System.Drawing.Size(15, 14);
             this.chkIsVegetarian.TabIndex = 13;
@@ -197,7 +199,7 @@
             // 
             this.chkIsGlutenFree.AutoSize = true;
             this.chkIsGlutenFree.Enabled = false;
-            this.chkIsGlutenFree.Location = new System.Drawing.Point(312, 637);
+            this.chkIsGlutenFree.Location = new System.Drawing.Point(798, 739);
             this.chkIsGlutenFree.Name = "chkIsGlutenFree";
             this.chkIsGlutenFree.Size = new System.Drawing.Size(15, 14);
             this.chkIsGlutenFree.TabIndex = 14;
@@ -207,7 +209,7 @@
             // 
             this.chkIsHalal.AutoSize = true;
             this.chkIsHalal.Enabled = false;
-            this.chkIsHalal.Location = new System.Drawing.Point(257, 722);
+            this.chkIsHalal.Location = new System.Drawing.Point(1442, 743);
             this.chkIsHalal.Name = "chkIsHalal";
             this.chkIsHalal.Size = new System.Drawing.Size(15, 14);
             this.chkIsHalal.TabIndex = 15;
@@ -215,9 +217,10 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(1791, 42);
+            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnQuit.Location = new System.Drawing.Point(1719, 924);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(101, 47);
+            this.btnQuit.Size = new System.Drawing.Size(173, 105);
             this.btnQuit.TabIndex = 16;
             this.btnQuit.Text = "Close";
             this.btnQuit.UseVisualStyleBackColor = true;
@@ -225,9 +228,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(1791, 128);
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEdit.Location = new System.Drawing.Point(1719, 813);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(101, 48);
+            this.btnEdit.Size = new System.Drawing.Size(173, 105);
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Edit Database";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -236,11 +240,12 @@
             // lblETA
             // 
             this.lblETA.AutoSize = true;
-            this.lblETA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblETA.Location = new System.Drawing.Point(513, 825);
+            this.lblETA.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblETA.Location = new System.Drawing.Point(831, 784);
             this.lblETA.Name = "lblETA";
-            this.lblETA.Size = new System.Drawing.Size(0, 39);
+            this.lblETA.Size = new System.Drawing.Size(537, 55);
             this.lblETA.TabIndex = 18;
+            this.lblETA.Text = "Estimated time to make:";
             // 
             // OrderForm
             // 
