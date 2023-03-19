@@ -134,11 +134,15 @@ namespace GEFMA
             {
                 btnUpdate.Visible = false;
                 btnSave.Visible = true;
+                btnInsert.Visible = false;
+                btnDelete.Visible = false;
             }
             else
             {
                 btnUpdate.Visible = true;
                 btnSave.Visible = false;
+                btnInsert.Visible = true;
+                btnDelete.Visible = true;
             }
         }
         private void DisableSelect()
@@ -203,6 +207,7 @@ namespace GEFMA
                 int id = int.Parse(item[0].Value.ToString());
                 RestaurantBusiness.Delete(id);
                 UpdateGrid();
+                ClearAllControls();
                 ResetSelect();
             }
         }
