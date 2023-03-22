@@ -54,6 +54,7 @@
             this.txtETA = new System.Windows.Forms.TextBox();
             this.btnBackToDishes = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
@@ -126,7 +127,7 @@
             // 
             this.lblImage.AutoSize = true;
             this.lblImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblImage.Location = new System.Drawing.Point(44, 850);
+            this.lblImage.Location = new System.Drawing.Point(12, 813);
             this.lblImage.Name = "lblImage";
             this.lblImage.Size = new System.Drawing.Size(158, 55);
             this.lblImage.TabIndex = 6;
@@ -134,10 +135,10 @@
             // 
             // btnImageUpload
             // 
-            this.btnImageUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnImageUpload.Location = new System.Drawing.Point(22, 930);
+            this.btnImageUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnImageUpload.Location = new System.Drawing.Point(22, 910);
             this.btnImageUpload.Name = "btnImageUpload";
-            this.btnImageUpload.Size = new System.Drawing.Size(204, 76);
+            this.btnImageUpload.Size = new System.Drawing.Size(213, 56);
             this.btnImageUpload.TabIndex = 7;
             this.btnImageUpload.Text = "Upload Image";
             this.btnImageUpload.UseVisualStyleBackColor = true;
@@ -242,10 +243,10 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnInsert.Location = new System.Drawing.Point(1555, 443);
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnInsert.Location = new System.Drawing.Point(1509, 443);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(337, 79);
+            this.btnInsert.Size = new System.Drawing.Size(179, 65);
             this.btnInsert.TabIndex = 18;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -253,10 +254,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete.Location = new System.Drawing.Point(1555, 636);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDelete.Location = new System.Drawing.Point(1713, 531);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(337, 79);
+            this.btnDelete.Size = new System.Drawing.Size(179, 61);
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -264,10 +265,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdate.Location = new System.Drawing.Point(1555, 537);
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdate.Location = new System.Drawing.Point(1713, 443);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(330, 79);
+            this.btnUpdate.Size = new System.Drawing.Size(179, 65);
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -275,10 +276,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSave.Location = new System.Drawing.Point(1555, 537);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSave.Location = new System.Drawing.Point(1509, 529);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(337, 79);
+            this.btnSave.Size = new System.Drawing.Size(179, 65);
             this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -309,9 +310,9 @@
             // btnBackToDishes
             // 
             this.btnBackToDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBackToDishes.Location = new System.Drawing.Point(1555, 765);
+            this.btnBackToDishes.Location = new System.Drawing.Point(1509, 771);
             this.btnBackToDishes.Name = "btnBackToDishes";
-            this.btnBackToDishes.Size = new System.Drawing.Size(337, 122);
+            this.btnBackToDishes.Size = new System.Drawing.Size(383, 121);
             this.btnBackToDishes.TabIndex = 24;
             this.btnBackToDishes.Text = "Back to dishes";
             this.btnBackToDishes.UseVisualStyleBackColor = true;
@@ -320,19 +321,30 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnClose.Location = new System.Drawing.Point(1555, 907);
+            this.btnClose.Location = new System.Drawing.Point(1509, 910);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(337, 122);
+            this.btnClose.Size = new System.Drawing.Size(383, 116);
             this.btnClose.TabIndex = 25;
             this.btnClose.Text = "Quit";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(1509, 621);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(383, 129);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Go to orders";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // CRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBackToDishes);
             this.Controls.Add(this.txtETA);
@@ -397,5 +409,6 @@
         private System.Windows.Forms.TextBox txtETA;
         private System.Windows.Forms.Button btnBackToDishes;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button button1;
     }
 }
