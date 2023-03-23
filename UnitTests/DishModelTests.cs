@@ -9,9 +9,15 @@ using Data;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// A TestClass that contains UnitTests for the Dish model.
+    /// </summary>
     [TestClass]
     public class DishModelTests
     {
+        /// <summary>
+        /// A TestMethod that tests the Name field in the Dish model.
+        /// </summary>
         [TestMethod]
         public void DishModelKeepsNameValue()
         {
@@ -22,6 +28,9 @@ namespace UnitTests
             Dish testDish = new Dish(name, dishPrice, description, testImage, true, true, true, true, 15.2f);
             Assert.AreEqual(name, testDish.Name);
         }
+        /// <summary>
+        /// A TestMethod that tests the Price field in the Dish model.
+        /// </summary>
         [TestMethod]
         public void DishModelKeepsPriceValue()
         {
@@ -32,6 +41,9 @@ namespace UnitTests
             Dish testDish = new Dish(name, dishPrice, description, testImage, true, true, true, true, 15.2f);
             Assert.AreEqual(dishPrice, testDish.Price);
         }
+        /// <summary>
+        /// A TestMethod that tests the Description field in the Dish model.
+        /// </summary>
         [TestMethod]
         public void DishModelKeepsDescriptionValue()
         {
@@ -42,6 +54,9 @@ namespace UnitTests
             Dish testDish = new Dish(name, dishPrice, description, testImage, true, true, true, true, 15.2f);
             Assert.AreEqual(description, testDish.Description);
         }
+        /// <summary>
+        /// A TestMethod that tests the Image field in the Dish model.
+        /// </summary>
         [TestMethod]
         public void DishModelKeepsImageValue()
         {
@@ -52,6 +67,9 @@ namespace UnitTests
             Dish testDish = new Dish(name, dishPrice, description, testImage, true, true, true, true, 15.2f);
             Assert.AreEqual(testImage, testDish.Image);
         }
+        /// <summary>
+        /// A TestMethod that tests the ETA field in the Dish model.
+        /// </summary>
         [TestMethod]
         public void DishModelKeepsETAValue()
         {
@@ -63,6 +81,5 @@ namespace UnitTests
             Dish testDish = new Dish(name, dishPrice, description, testImage, true, true, true, true, ETA);
             Assert.AreEqual(ETA, testDish.EstimatedTimeToComplete);
         }
-
     }
 }
