@@ -199,7 +199,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OrderBussinessTests.cs" />
-    <Compile Include="RestaurantBusinessTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
