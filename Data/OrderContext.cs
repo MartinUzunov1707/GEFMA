@@ -6,8 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Data.Models;
 
-public class OrderContext : DbContext
+namespace Data
 {
-    public OrderContext() : base("name=OrderContext") { }
-    public DbSet<Order> Orders { get; set; }
+    /// <summary>
+    /// OrderContext class. Inherits from DbContext. (Code first approach)
+    /// </summary>
+    public class OrderContext : DbContext
+    {
+        /// <summary>
+        /// A constructor for the class that passes the name of the context to the DbContext constructor.
+        /// </summary>
+        public OrderContext() : base("name=OrderContext") { }
+        /// <summary>
+        /// A public field of the DbSet type that stores orders.
+        /// </summary>
+        public DbSet<Order> Orders { get; set; }
+    }
 }
