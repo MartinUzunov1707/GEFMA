@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 using Data.Models;
 using Data;
 
+/// <summary>
+/// This class keeps all the business logic for the order database.
+/// The class implements all the CRUD operations.
+/// </summary>
 public class OrderBusiness
 {
+    
     private OrderContext OrderContext;
+    /// <summary>
+    /// The GetAll function returns all of the databases content in a list.
+    /// </summary>
     public List<Order> GetAll()
     {
         using (OrderContext = new OrderContext())
@@ -17,6 +25,12 @@ public class OrderBusiness
             return OrderContext.Orders.ToList();
         }
     }
+
+    /// <summary>
+    /// The Get function returns an object of Order type by its ID.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     public Order Get(int id)
     {
         using (OrderContext = new OrderContext())
@@ -24,6 +38,10 @@ public class OrderBusiness
             return OrderContext.Orders.Find(id);
         }
     }
+    /// <summary>
+    /// The Add function adds an Order to the Order Database.
+    /// </summary>
+    /// <param name="dish"></param>
     public void Add(Order dish)
     {
         using (OrderContext = new OrderContext())
@@ -32,6 +50,10 @@ public class OrderBusiness
             OrderContext.SaveChanges();
         }
     }
+    /// <summary>
+    /// The Update function Updates a preexisting Order with new values.
+    /// </summary>
+    /// <param name="dish"></param>
     public void Update(Order dish)
     {
         using (OrderContext = new OrderContext())
@@ -44,6 +66,10 @@ public class OrderBusiness
             }
         }
     }
+    /// <summary>
+    /// The Delete function deletes an item from the Order Database by its ID.
+    /// </summary>
+    /// <param name="id"></param>
     public void Delete(int id)
     {
         using (OrderContext = new OrderContext())
