@@ -7,9 +7,15 @@ using Business;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// A TestClass that contains UnitTests for the OrderBusiness class.
+    /// </summary>
     [TestClass]
     public class OrderBussinessTests
     {
+        /// <summary>
+        /// A TestMethod that tests the Add method in the OrderBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestAddMethod()
         {
@@ -23,6 +29,9 @@ namespace UnitTests
             Assert.IsTrue(AreEqual);
             business.Delete(order.ID);
         }
+        /// <summary>
+        /// A TestMethod that tests the Delete method in the OrderBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestDeleteMethod()
         {
@@ -36,6 +45,9 @@ namespace UnitTests
             Assert.IsTrue(Length == business.GetAll().Count - 1);
             business.Delete(order.ID);
         }
+        /// <summary>
+        /// A TestMethod that tests the Update method in the OrderBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestUpdateMethod()
         {
@@ -50,6 +62,9 @@ namespace UnitTests
             Assert.IsTrue(business.GetAll().LastOrDefault().Price == 100);
             business.Delete(order.ID);
         }
+        /// <summary>
+        /// A TestMethod that tests the Get method in the OrderBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestGetMethod()
         {
