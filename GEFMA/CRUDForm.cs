@@ -174,8 +174,7 @@ namespace GEFMA
                 ClearAllControls();
             }
             else 
-            { 
-            
+            {
                MessageBox.Show("Invalid entry parameters!");
             }
         }
@@ -231,6 +230,12 @@ namespace GEFMA
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void btnViewOrders_Click(object sender, EventArgs e)
+        {
+            CRUDFormOrders formOrders = new CRUDFormOrders();
+            formOrders.Show();
+            Hide();
         }
     }
 }
