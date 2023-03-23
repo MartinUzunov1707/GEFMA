@@ -198,7 +198,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DishModelTests.cs" />
     <Compile Include="OrderBussinessTests.cs" />
+    <Compile Include="OrderModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
