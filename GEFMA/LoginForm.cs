@@ -13,12 +13,22 @@ using System.Data.Entity.Infrastructure;
 
 namespace GEFMA
 {
+    /// <summary>
+    /// This form is being initialized when the user wants to edit the databases.
+    /// </summary>
     public partial class LoginForm : Form
     {
         public LoginForm()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Upon initialization, the form checks if the admin has registered.
+        /// If the admin has not registered, the program creates a bin file with their credentials and changes 
+        /// the labels to "register" instead of "login".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginPage_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
@@ -42,19 +52,36 @@ namespace GEFMA
                 btnLogin.Text = "Register";
             }
         }
+        /// <summary>
+        /// This function checks if the form is in register mode or in login mode.
+        /// If the user has not registered, their inputs will be encrypted and saved in a bin file, and they
+        /// will be redirected to the admin form.
+        /// If the user has registered before, the program checks if the input credentials match with those in
+        /// the bin file.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if(btnLogin.Text == "Register")
             {
-                LoginInfo loginInfo = new LoginInfo(txtUsername.Text, txtPassword.Text, false);
-                StreamWriter writer = new StreamWriter("loginInfo.bin");
-                writer.WriteLine(string.Join("", loginInfo.Username));
-                writer.WriteLine(string.Join("", loginInfo.Password));
-                writer.Close();
-                MessageBox.Show("Register successful!");
-                CRUDForm AdminForm = new CRUDForm();
-                AdminForm.Show();
-                Hide();
+                if (txtUsername.Text.Length != 0 && txtPassword.Text.Length != 0)
+                {
+
+                    LoginInfo loginInfo = new LoginInfo(txtUsername.Text, txtPassword.Text, false);
+                    StreamWriter writer = new StreamWriter("loginInfo.bin");
+                    writer.WriteLine(string.Join("", loginInfo.Username));
+                    writer.WriteLine(string.Join("", loginInfo.Password));
+                    writer.Close();
+                    MessageBox.Show("Register successful!");
+                    CRUDForm AdminForm = new CRUDForm();
+                    AdminForm.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("The login credentials cannot be empty!");
+                }
             }
             else
             {
@@ -75,6 +102,11 @@ namespace GEFMA
                 }
             }
         }   
+        /// <summary>
+        /// Upon pressing the quit button the program closes.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();

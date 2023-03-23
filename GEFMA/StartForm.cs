@@ -12,6 +12,9 @@ using System.Windows.Forms;
 
 namespace GEFMA
 {
+    /// <summary>
+    /// This is the form that is being initialized upon starting of the program. 
+    /// </summary>
     public partial class StartForm : Form
     {
         RestaurantBusiness RestaurantBusiness = new RestaurantBusiness();
@@ -19,12 +22,24 @@ namespace GEFMA
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// This function puts the form in "fullscreen" mode.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartForm_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;      
         }
+        /// <summary>
+        /// This function is called upon the StartForm_KeyPress event. 
+        /// It checks if the database is empty, and if so, it loads up the login page, from which the user can 
+        /// fill the database, if they have the admin credentials.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartForm_KeyPress(object sender, KeyPressEventArgs e)
         {
             Dish firstDish = RestaurantBusiness.GetAll().FirstOrDefault();
