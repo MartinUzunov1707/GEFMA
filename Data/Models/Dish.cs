@@ -12,7 +12,7 @@ namespace Data
     public class Dish
     {
         /// <summary>
-        /// Constructor for dish class. This constructor fills every field in the class.
+        /// Constructor for Dish class. This constructor fills every field in the class.
         /// </summary>
         /// <param name="DishName"></param>
         /// <param name="DishPrice"></param>
