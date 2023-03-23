@@ -32,7 +32,7 @@ public class OrderBusiness
             OrderContext.SaveChanges();
         }
     }
-    public void Update(Dish dish)
+    public void Update(Order dish)
     {
         using (OrderContext = new OrderContext())
         {
