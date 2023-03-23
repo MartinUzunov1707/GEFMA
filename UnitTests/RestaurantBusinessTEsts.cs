@@ -4,9 +4,15 @@ using System.Linq;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// A TestClass that contains UnitTests for the RestaurantBusiness class.
+    /// </summary>
     [TestClass]
     public class RestaurantBusinessTests
     {
+        /// <summary>
+        /// A TestMethod that tests the Add method in the RestaurantBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestAddMethod()
         {
@@ -18,6 +24,9 @@ namespace UnitTests
             Assert.IsTrue(AreEqual);
             business.Delete(dish.ID);
         }
+        /// <summary>
+        /// A TestMethod that tests the Delete method in the RestaurantBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestDeleteMethod()
         {
@@ -29,6 +38,9 @@ namespace UnitTests
             Assert.IsTrue(Length == business.GetAll().Count - 1);
             business.Delete(dish.ID);
         }
+        /// <summary>
+        /// A TestMethod that tests the Update method in the RestaurantBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestUpdateMethod()
         {
@@ -41,6 +53,9 @@ namespace UnitTests
             Assert.IsTrue(business.GetAll().LastOrDefault().Price == 100);
             business.Delete(dish.ID);
         }
+        /// <summary>
+        /// A TestMethod that tests the Get method in the RestaurantBusiness class.
+        /// </summary>
         [TestMethod]
         public void TestGetMethod()
         {
