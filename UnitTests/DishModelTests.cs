@@ -19,7 +19,7 @@ namespace UnitTests
             decimal dishPrice = 12.2m;
             string description = "Test Description";
             byte[] testImage = new byte[64];
-            Dish testDish = new Dish(name,dishPrice,description,testImage,true,true,true,true,15.2f);
+            Dish testDish = new Dish(name, dishPrice, description, testImage, true, true, true, true, 15.2f);
             Assert.AreEqual(name, testDish.Name);
         }
         [TestMethod]
