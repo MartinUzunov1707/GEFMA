@@ -65,6 +65,12 @@
     <Compile Include="CRUDForm.Designer.cs">
       <DependentUpon>CRUDForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUDFormOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDFormOrders.Designer.cs">
+      <DependentUpon>CRUDFormOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CRUDForm.resx">
       <DependentUpon>CRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDFormOrders.resx">
+      <DependentUpon>CRUDFormOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
