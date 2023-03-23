@@ -202,6 +202,7 @@
     <Compile Include="OrderBussinessTests.cs" />
     <Compile Include="OrderModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantBusinessTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
