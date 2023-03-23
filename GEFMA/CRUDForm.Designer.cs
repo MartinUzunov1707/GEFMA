@@ -54,7 +54,7 @@
             this.txtETA = new System.Windows.Forms.TextBox();
             this.btnBackToDishes = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnViewOrders = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
@@ -329,22 +329,23 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // button1
+            // btnViewOrders
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1509, 621);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(383, 129);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Go to orders";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnViewOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnViewOrders.Location = new System.Drawing.Point(1509, 621);
+            this.btnViewOrders.Name = "btnViewOrders";
+            this.btnViewOrders.Size = new System.Drawing.Size(383, 129);
+            this.btnViewOrders.TabIndex = 26;
+            this.btnViewOrders.Text = "Go to orders";
+            this.btnViewOrders.UseVisualStyleBackColor = true;
+            this.btnViewOrders.Click += new System.EventHandler(this.btnViewOrders_Click);
             // 
             // CRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnViewOrders);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBackToDishes);
             this.Controls.Add(this.txtETA);
@@ -409,6 +410,6 @@
         private System.Windows.Forms.TextBox txtETA;
         private System.Windows.Forms.Button btnBackToDishes;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnViewOrders;
     }
 }
