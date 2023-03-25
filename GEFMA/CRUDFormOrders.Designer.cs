@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDFormOrders));
             this.dgvItems = new System.Windows.Forms.DataGridView();
             this.btnMarkAsInProgress = new System.Windows.Forms.Button();
             this.btnMarkAsCompleted = new System.Windows.Forms.Button();
@@ -65,7 +66,7 @@
             this.btnMarkAsCompleted.Name = "btnMarkAsCompleted";
             this.btnMarkAsCompleted.Size = new System.Drawing.Size(269, 134);
             this.btnMarkAsCompleted.TabIndex = 22;
-            this.btnMarkAsCompleted.Text = "Mark as in completed";
+            this.btnMarkAsCompleted.Text = "Mark as completed";
             this.btnMarkAsCompleted.UseVisualStyleBackColor = true;
             this.btnMarkAsCompleted.Click += new System.EventHandler(this.btnMarkAsCompleted_Click);
             // 
@@ -137,8 +138,9 @@
             this.Controls.Add(this.btnMarkAsCompleted);
             this.Controls.Add(this.btnMarkAsInProgress);
             this.Controls.Add(this.dgvItems);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CRUDFormOrders";
-            this.Text = "CRUDFormOrders";
+            this.Text = "GEFMA";
             this.Load += new System.EventHandler(this.CRUDFormOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
             this.ResumeLayout(false);
