@@ -13,15 +13,29 @@ using System.Windows.Forms;
 
 namespace GEFMA
 {
+    /// <summary>
+    /// Form that lets admins edit the database.
+    /// </summary>
     public partial class CRUDForm : Form
     {
+        /// <summary>
+        /// Fields used in the methods of the form.
+        /// </summary>
         public RestaurantBusiness RestaurantBusiness = new RestaurantBusiness();
         Image Image;
         private int EditId = 0;
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public CRUDForm()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Load event of the form. We maximize the window and update the grid and clear all controls.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CRUDForm_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
@@ -30,6 +44,11 @@ namespace GEFMA
             UpdateGrid();
             ClearAllControls();
         }
+        /// <summary>
+        /// A method which converts an Image to a byte array.
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
         public byte[] ConvertImageToByte(Image img)
         {
             using (MemoryStream MemoryStream = new MemoryStream())
@@ -38,6 +57,11 @@ namespace GEFMA
                 return MemoryStream.ToArray();
             }
         }
+        /// <summary>
+        /// A method which converts a byte array to an Image.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public Image ConvertByteArrayToImage(byte[] data)
         {
             using (MemoryStream MemoryStream = new MemoryStream(data))
@@ -45,12 +69,18 @@ namespace GEFMA
                 return Image.FromStream(MemoryStream);
             }
         }
+        /// <summary>
+        /// Method that updates the DataGridView.
+        /// </summary>
         private void UpdateGrid()
         {
             dgvItems.DataSource = RestaurantBusiness.GetAll();
             dgvItems.ReadOnly = true;
             dgvItems.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        /// <summary>
+        /// Method that clears all controls.
+        /// </summary>
         private void ClearAllControls()
         {
             txtName.Text = "";
@@ -63,6 +93,11 @@ namespace GEFMA
             chkIsVegetarian.Checked = false;
             picImage.Image = null;
         }
+        /// <summary>
+        /// Method that gets a Dish from controls.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         private Dish GetDish()
         {
             string Name = txtName.Text;
@@ -88,6 +123,11 @@ namespace GEFMA
             Image = null;
             return Dish;
         }
+        /// <summary>
+        /// Method that gets the edited dish from the controls.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         private Dish GetEditedDish()
         {
             string Name = txtName.Text;
@@ -114,6 +154,10 @@ namespace GEFMA
             Image = null;
             return Dish;
         }
+        /// <summary>
+        /// Method that updates controls with values from a dish ID.
+        /// </summary>
+        /// <param name="id"></param>
         private void UpdateControls(int id)
         {
             Dish Dish = RestaurantBusiness.Get(id);
@@ -128,6 +172,9 @@ namespace GEFMA
             chkIsGlutenFree.Checked = Dish.IsGlutenFree;
             chkIsHalal.Checked = Dish.IsHalal;
         }
+        /// <summary>
+        /// Method that makes certain controls not visible when the should not be.
+        /// </summary>
         private void ToggleSaveUdpate()
         {
             if (btnUpdate.Visible)
@@ -145,15 +192,26 @@ namespace GEFMA
                 btnDelete.Visible = true;
             }
         }
+        /// <summary>
+        /// Method that disables select on the DataGridView control.
+        /// </summary>
         private void DisableSelect()
         {
             dgvItems.Enabled = false;
         }
+        /// <summary>
+        /// Method that resets select of the DataGridView control.
+        /// </summary>
         private void ResetSelect()
         {
             dgvItems.ClearSelection();
             dgvItems.Enabled = true;
         }
+        /// <summary>
+        /// Method that adds an Image to an item. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImageUpload_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image files (*.png;*.jpg)|*.png;*.jpg", Multiselect = false })
@@ -165,6 +223,11 @@ namespace GEFMA
                 }
             }
         }
+        /// <summary>
+        /// Method that inserts an item into the database. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInsert_Click_1(object sender, EventArgs e)
         {
             if(Image != null)
@@ -178,6 +241,11 @@ namespace GEFMA
                MessageBox.Show("Invalid entry parameters!");
             }
         }
+        /// <summary>
+        /// Method that saves updated item to the database. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             Dish editedDish = GetEditedDish();
@@ -187,6 +255,11 @@ namespace GEFMA
             ToggleSaveUdpate();
             ClearAllControls();
         }
+        /// <summary>
+        /// Method that updates current item from the database. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             if (dgvItems.SelectedRows.Count > 0)
@@ -199,6 +272,11 @@ namespace GEFMA
                 DisableSelect();
             }
         }
+        /// <summary>
+        /// Method that deletes current item from the database. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             if (dgvItems.SelectedRows.Count > 0)
@@ -211,6 +289,11 @@ namespace GEFMA
                 ResetSelect();
             }
         }
+        /// <summary>
+        /// Method that makes an object of OrderForm, shows it and hides current form. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBackToDishes_Click(object sender, EventArgs e)
         {
             Dish FirstDish = RestaurantBusiness.GetAll().FirstOrDefault();
@@ -227,10 +310,20 @@ namespace GEFMA
                 Hide();
             }
         }
+        /// <summary>
+        /// A method that closes the window. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
+        /// <summary>
+        /// A method that creates a CrudFormOrders shows it and hides the current form. Called when a button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnViewOrders_Click(object sender, EventArgs e)
         {
             CRUDFormOrders formOrders = new CRUDFormOrders();
