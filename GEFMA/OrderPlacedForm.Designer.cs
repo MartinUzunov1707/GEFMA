@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderPlacedForm));
             this.lblInstruction = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
@@ -92,9 +93,10 @@
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.lblInstruction);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "OrderPlacedForm";
-            this.Text = "OrderPlacedForm";
+            this.Text = "GEFMA";
             this.Load += new System.EventHandler(this.OrderPlacedForm_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderPlacedForm_KeyPress);
             this.ResumeLayout(false);
