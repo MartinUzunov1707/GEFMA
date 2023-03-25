@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderedListForm));
             this.lblETA = new System.Windows.Forms.Label();
             this.chkIsHalal = new System.Windows.Forms.CheckBox();
             this.lblIsHalal = new System.Windows.Forms.Label();
@@ -296,8 +297,9 @@
             this.Controls.Add(this.chkIsHalal);
             this.Controls.Add(this.lblIsHalal);
             this.Controls.Add(this.lblPrice);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrderedListForm";
-            this.Text = "OrderedListForm";
+            this.Text = "GEFMA";
             this.Load += new System.EventHandler(this.OrderedListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
