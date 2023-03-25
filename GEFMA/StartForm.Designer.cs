@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblInstruction = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -62,9 +63,10 @@
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.lblInstruction);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "StartForm";
-            this.Text = "Form1";
+            this.Text = "GEFMA";
             this.Load += new System.EventHandler(this.StartForm_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StartForm_KeyPress);
             this.ResumeLayout(false);
