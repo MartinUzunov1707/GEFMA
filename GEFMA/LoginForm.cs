@@ -46,8 +46,6 @@ namespace GEFMA
             }
             else
             {
-                StreamWriter w = new StreamWriter("loginInfo.bin");
-                w.Close();
                 lblTitle.Text = "Register as an admin";
                 btnLogin.Text = "Register";
             }
